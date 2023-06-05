@@ -1,6 +1,15 @@
 const addBook = document.getElementById("addBook");
 const showBox = document.getElementById("book");
 
+const detail = document.getElementById("bookDetails");
+const detailTitle = document.getElementById("detailTitle");
+const detailAuthor = document.getElementById("detailAuthor");
+const detailImage = document.getElementById("detailImage");
+const detailPrice = document.getElementById("detailPrice");
+const detailGenre = document.getElementById("detailGenre");
+const detailRating = document.getElementById("detailRating");
+const detailDesc = document.getElementById("detailDesc");
+
 // --------- Show ---------
 
 const show = () => {
@@ -86,9 +95,10 @@ const show = () => {
             });
         });
 
-        btn3.addEventListener("click", ()=>{
-          window.location.href = "./user.html"
-        })
+        btn3.addEventListener("click", () => {
+          localStorage.setItem("id", JSON.stringify(el.id));
+          window.location.href = "./user.html";
+        });
 
         div1.append(
           image,
@@ -107,6 +117,26 @@ const show = () => {
     });
 };
 show();
+
+// -------- Details Page --------
+
+const item = JSON.parse(localStorage.getItem("id"));
+const details = async () => {
+  await fetch(`http://localhost:5000/books/${item}`, {
+    method: "GET",
+  })
+    .then((res) => res.json())
+    .then((el) => {
+      detailTitle.innerText = el.name;
+      detailAuthor.innerText = `Author : ${el.author}`;
+      detailGenre.innerText = `Genre : ${el.genre}`;
+      detailRating.innerText = `Rating : ${el.rating}`;
+      detailPrice.innerText = `Price : ${el.price}`;
+      detailDesc.innerText = el.fullDesc;
+      detailImage.src = el.image;
+    });
+};
+details()
 
 // --------- Add ---------
 

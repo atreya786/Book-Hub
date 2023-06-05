@@ -23,21 +23,17 @@
 
       img {
         margin-top: 3.5rem;
-        margin-left: 20rem;
         width: 25%;
       }
       .div1 {
         margin-top: 3.2rem;
       }
 
-      h2 {
-        margin-left: 41rem;
-      }
-      h4 {
-        margin-left: 36rem;
-      }
-      h5 {
-        margin-left: 39rem;
+      #bookDetails{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
     </style>
   </head>
@@ -63,38 +59,17 @@
     </div>
     <!-- </nav> -->
 
-    <div id="book">
-      <img
-        src="https://m.media-amazon.com/images/I/519zR2oIlmL._AC_UF1000,1000_QL80_.jpg"
-        alt=""
-      />
-      <h2>1984</h2>
-      <h4>Author : George Orwell</h4>
-      <h5>Genre : Dystopian</h5>
-      <h5>Price : 12.99 $</h5>
-      <h5>Rating : 4.8</h5>
-      <p>
-        Desription : A dystopian novel set in a totalitarian. Lorem ipsum dolor
-        sit amet consectetur adipisicing elit. Quisquam in repellendus magni
-        odit ab saepe expedita dolore fugit iure mollitia, ratione temporibus
-        velit dolorum, facere ullam aut. Ducimus minus numquam cumque fugit vel
-        officia neque aliquam est soluta unde dignissimos cupiditate nobis aut
-        perspiciatis illo, asperiores nihil magni animi ab exercitationem
-        voluptate minima repellat quam ad? Libero, blanditiis? Reprehenderit
-        obcaecati dolorem eum nihil, nostrum dolor, earum quas aperiam iusto,
-        vitae totam. Culpa laudantium atque quasi omnis temporibus eligendi
-        placeat tempora suscipit, eaque nihil, iste nostrum nemo reprehenderit
-        quibusdam? Iure, ducimus! Temporibus eligendi modi ratione ut quibusdam,
-        hic illo fuga nesciunt!> Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Amet consequatur dolorem eum sunt fugiat iure
-        obcaecati quis deleniti! Explicabo alias nisi tenetur voluptas
-        doloremque optio a ipsum officia quidem deleniti reprehenderit
-        laboriosam, rerum reiciendis libero. Doloribus voluptas consequatur,
-        amet sequi nesciunt sit earum architecto reprehenderit! Quod non ipsam
-        maiores aliquam.
-      </p>
+    <div id="bookDetails">
+      <img id="detailImage" src="" alt="" />
+      <h2 id="detailTitle"></h2>
+      <h4 id="detailAuthor"></h4>
+      <h5 id="detailGenre"></h5>
+      <h5 id="detailPrice"></h5>
+      <h5 id="detailRating"></h5>
+      <p id="detailDesc"></p>
     </div>
 
+    <script src="script.js"></script>
     <script>
       function logout_btn() {
         alert("Logout Successful");

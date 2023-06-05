@@ -21,12 +21,12 @@
         width: 100%;
       }
 
-      #book{
+      #book {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 1rem;
       }
-      .div1{
+      .div1 {
         margin-top: 3.2rem;
       }
     </style>
@@ -35,21 +35,25 @@
   <body>
     <!-- navbar -->
     <!-- <nav> -->
-      <div class="container-fluid">
-        <a class="navbar-brand float-start" href="/main.html">
-          <h1 style="font-weight: bold; color: rgba(240, 248, 255, 0.726)">
-            BookHub
-          </h1></a
+    <div class="container-fluid">
+      <a class="navbar-brand float-start" href="/main.html">
+        <h1 style="font-weight: bold; color: rgba(240, 248, 255, 0.726)">
+          BookHub
+        </h1></a
+      >
+      <div class="float-end">
+        <a style="margin: 3px" class="btn btn-primary btn-md" id="addBook"
+          >Add Book</a
         >
-        <div class="float-end">
-          <a style="margin: 3px" class="btn btn-primary btn-md" id="addBook"
-            >Add Book</a
-          >
-          <a style="margin: 3px" class="btn btn-primary btn-md" onclick="logout_btn()" id="logoutBtn"
-            >Logout</a
-          >
-        </div>
+        <a
+          style="margin: 3px"
+          class="btn btn-primary btn-md"
+          onclick="logout_btn()"
+          id="logoutBtn"
+          >Logout</a
+        >
       </div>
+    </div>
     <!-- </nav> -->
 
     <div id="book"></div>
